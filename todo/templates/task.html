@@ -1,0 +1,9 @@
+ID: {{task.id}} <br>
+CONTENT: {{task.content}} <br>
+
+<a href="/delete/{{task.id}}">Delete</a>
+
+<form method="POST" action="/task/{{task.id}}">
+    <input type="text" name="content">
+    <button type="submit">Update</button>
+</form>

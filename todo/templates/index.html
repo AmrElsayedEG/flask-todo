@@ -1,0 +1,14 @@
+{% if tasks %}
+    {% for task in tasks %}
+        <a href="/task/{{task.id}}">{{task.content}}</a>
+        <br>
+    {% endfor %}
+{% else %}
+<h3>No tasks yet...</h3>
+{% endif %}
+<br>
+
+<form method="POST" action="/">
+    <input type="text" name="content"/>
+    <button type="submit">Add</button>
+</form>
